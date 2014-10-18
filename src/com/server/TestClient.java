@@ -7,7 +7,10 @@ import java.net.Socket;
 
 public class TestClient {
 	
+	private int portNumber;
+	
 	public static void main(String args[]) throws Exception {
+		System.out.println("Please Enter a Port Number");
 		Socket socket = new Socket("localhost", 6789);
 		BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
 		DataOutputStream sendMessage = new DataOutputStream(socket.getOutputStream());

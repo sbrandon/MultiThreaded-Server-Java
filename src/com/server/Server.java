@@ -26,7 +26,7 @@ public class Server {
 	}
 	
 	public static void main(String[] args) throws IOException {
-		int portNumber = 6789;//Integer.parseInt(args[0]);
+		int portNumber = Integer.parseInt(args[0]);
 		Server server = new Server(new ServerSocket(portNumber));
 		while(true){
 			if(executorService.getActiveCount() < executorService.getMaximumPoolSize()){
