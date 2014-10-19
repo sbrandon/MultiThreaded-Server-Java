@@ -27,7 +27,7 @@ public class ClientWorker implements Runnable {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
 			command = reader.readLine();
-			if(command.equals("HELO text")){
+			if(command.startsWith("HELO")){
 				writer.println(heloResponse());
 			}
 			else if(command.equals("KILL_SERVICE")){
