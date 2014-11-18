@@ -1,3 +1,8 @@
+/*
+ * Class TestClient was used only for testing the server.
+ * Stephen Brandon
+ * October 2014
+ */
 package com.server;
 
 import java.io.BufferedReader;
